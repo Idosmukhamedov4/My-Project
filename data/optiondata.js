@@ -32,7 +32,9 @@ const loreData = {
         `It all starts in January 15, 1979 when a Soviet experiment in Warsaw got 
         out of containment and spread across Europe. But on July 4, 1980
          the zombie virus landed in eastern United States.`,
-         ``
+         `You might encounter some brave newsmen that are sacrificing themselfes to Deliver news to those travelers who need it most. 
+         Some of those newsmen include Mike who had no family left, Henry who couldn't bear the fear of living in a world of zombies, 
+         and Henry who was old and grumpy in his past years, but wanted to compensate.`
     ],
     tooltip: "press space bar to continue"
 }
