@@ -10,6 +10,7 @@ const text = document.getElementById("text")
 const toolTip = document.getElementById("tooltip")
 
 let currentData = optionData["title"]
+let currentTextIndex = 0
 
 function loadGame() {
     for (const op of currentData.options) {
@@ -23,6 +24,7 @@ function loadGame() {
 
 function loadUI() {
     removeUI()
+    currentTextIndex = 0
 
     if(currentData.title) {
         title.textContent = "Zombie Trail"
@@ -57,6 +59,19 @@ choice.addEventListener("keydown", (event) => {
 
         loadUI()
     }
+})
+
+document.addEventListener("keydown", (event) => {
+    if (event.code != "Space") return
+
+    event.preventDefault()
+
+    if (currentTextIndex < currentData.text.length - 1) {
+        currentTextIndex++ 
+        text.textContent = currentData.text[currentTextIndex]
+    }
+
+
 })
 
 loadGame()
