@@ -32,10 +32,14 @@ function loadUI() {
 
     if (currentData.text.length > 0) {
         text.textContent = currentData.text[0]
+        text.style.alignContent = "center"
+        // text.style.width = "80%"
+        text.style.textAlign = "center"
     }
 
     if (currentData.tooltip) {
         toolTip.textContent = currentData.tooltip
+        toolTip.style.textAlign = "center"
     }
 }
 
@@ -71,6 +75,9 @@ document.addEventListener("keydown", (event) => {
         text.textContent = currentData.text[currentTextIndex]
     }
 
+    if (currentTextIndex == currentData.text.length - 1) {
+        toolTip.textContent = ""
+    }
 
 })
 
