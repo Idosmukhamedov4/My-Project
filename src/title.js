@@ -35,6 +35,7 @@ function loadUI() {
         text.style.alignContent = "center"
         // text.style.width = "80%"
         text.style.textAlign = "center"
+        text.style.padding = "200px"
     }
 
     if (currentData.tooltip) {
@@ -77,6 +78,8 @@ document.addEventListener("keydown", (event) => {
 
     if (currentTextIndex == currentData.text.length - 1) {
         toolTip.textContent = ""
+        location.reload()
+        
     }
 
 })
