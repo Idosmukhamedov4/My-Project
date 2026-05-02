@@ -6,7 +6,7 @@
         {
             key: 1,
             prompt: "Drive the trail",
-            dest: "gameStart"
+            dest: "person"
         },
         {
             key: 2,
@@ -42,7 +42,32 @@ const loreData = {
     tooltip: "press space bar to continue"
 }
 
+const personMode ={
+    title: true,
+    selectable: true,
+    question: null,
+    options: [
+        {
+            key: 1,
+            prompt: "War Veteran",
+            dest: null
+        },
+        {
+            key: 2,
+            prompt: "Average Citizen",
+            dest: null
+        },
+        {
+            key: 3,
+            prompt: "Poor Farmer",
+            dest: null
+        }
+    ],
+    text: ['Many different people were on the trail. Choose someone to play as.']
+}
+
 export const optionData = {
-    title: titleData,
-    lore:  loreData
+    person: personMode,
+    lore:  loreData,
+    title: titleData
 }

@@ -24,6 +24,7 @@ function loadGame() {
 
 function loadUI() {
     removeUI()
+    loadGame()
     currentTextIndex = 0
 
     if(currentData.title) {
