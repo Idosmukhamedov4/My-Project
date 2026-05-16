@@ -36,7 +36,7 @@ function loadUI() {
         text.style.alignContent = "center"
         // text.style.width = "80%"
         text.style.textAlign = "center"
-        text.style.padding = "200px"
+        text.style.padding = "80px"
     }
 
     if (currentData.tooltip) {

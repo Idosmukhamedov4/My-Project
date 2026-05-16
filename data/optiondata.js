@@ -6,7 +6,7 @@
         {
             key: 1,
             prompt: "Drive the trail",
-            dest: "person"
+            dest: "modes"
         },
         {
             key: 2,
@@ -49,25 +49,72 @@ const personMode ={
     options: [
         {
             key: 1,
-            prompt: "War Veteran",
-            dest: null
+            prompt: "Rich Cowboy",
+            dest: gameStart,
+            difficulty: "easy",
+            description: "Fought bandits and very rich from looting.",
+            startingBonus: {
+                food: 500,
+                ammo: 200,
+                money: 700
+            }
         },
         {
             key: 2,
             prompt: "Average Citizen",
-            dest: null
+            dest: gameStart,
+            difficulty: "medium",
+            description: "just an average citizen",
+            startingBonus: {
+                food: 250,
+                ammo: 100,
+                money: 400
+            }
         },
         {
             key: 3,
-            prompt: "Poor Farmer",
-            dest: null
+            prompt: "Ron Weasley",
+            dest: gameStart,
+            difficulty: "hard",
+            description: "Read the books",
+            startingBonus: {
+                food: 200,
+                ammo: 0,
+                money: 200
+            }
         }
     ],
-    text: ['Many different people were on the trail. Choose someone to play as.']
+    text: ['Many different people were on the trail. Choose WISELY someone to play as.'],
+    tooltip: null
+}
+
+const tutorial = {
+    title: true,
+    selectable: false,
+    question: null,
+    options: [],
+    text: [
+        `It all starts in January 15, 1979 when a Soviet experiment in Warsaw got 
+        out of containment and spread across Europe. But on July 4, 1980
+         the zombie virus landed in eastern United States.`,
+         `You might encounter some brave newsmen that are sacrificing themselfes to Deliver news to those travelers who need it most. 
+         Some of those newsmen include Mike who had no family left, Henry who couldn't bear the fear of living in a world of zombies, 
+         and Henry who was old and grumpy in his past years, but wanted to compensate.`,
+         `Ther are infinite ways a person could die on the trail. Be careful, you might
+          encounter some unreal events. There are truly infinite ways you could die on the trail`,
+         ``
+    ],
+    tooltip: "press space bar to continue"
+}
+
+const crew ={
+    title: false,
+    selectable: true
 }
 
 export const optionData = {
     person: personMode,
     lore:  loreData,
-    title: titleData
+    title: titleData,
+    modes: personMode
 }
